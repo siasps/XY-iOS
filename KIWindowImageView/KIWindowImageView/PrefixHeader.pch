@@ -1,0 +1,37 @@
+//
+//  PrefixHeader.pch
+//  KIWindowImageView
+//
+//  Created by peng on 2017/5/22.
+//  Copyright © 2017年 peng. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
+#define SCREEN_WIDTH            [[UIScreen mainScreen] bounds].size.width
+#define SCREEN_HEIGHT           [[UIScreen mainScreen] bounds].size.height-APP_STATUSBAR_HEIGHT
+//状态栏高度
+#define APP_STATUSBAR_HEIGHT                (CGRectGetHeight([UIApplication sharedApplication].statusBarFrame)-20)  //标准高度：20，有热点栏时：40
+#define KIImageMaxSize     1.0*1000.0f*1000.0f   //图片最大size：1M
+#define TableSeparatorLineColor     [UIColor grayColor]  //用于项目中单线条颜色（tableView分割线颜色）
+#define SCREEN_SCALE            (SCREEN_WIDTH/320.0f)
+#define TextColor_3             [UIColor grayColor]  //通用字体颜色：浅浅黑色
+
+//装修常量
+#define JSON_NODE_category_name         @"category_name"
+#define JSON_NODE_category_id           @"category_id"
+
+
+
+
+
+#import "SDWebImage.h"
+#import "KIAdditions.h"
+#import "MBProgressHUD.h"
+
+#endif /* PrefixHeader_pch */
